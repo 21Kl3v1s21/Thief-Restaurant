@@ -3,13 +3,11 @@ import { menu } from '../../data/data';
 import Breadcrumb from '@/app/components/Breadcrumb';
 import Image from 'next/image';
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default function MenuSingle({ params }: PageProps) {
+export default function MenuSingle({
+  params,
+}: {
+  params: { id: string };
+}) {
   const item = menu.find((item) => item.id === Number(params.id));
   if (!item) return <h1>Menu item not found</h1>;
 
@@ -41,6 +39,8 @@ export default function MenuSingle({ params }: PageProps) {
     </main>
   );
 }
+
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return menu.map((item) => ({
