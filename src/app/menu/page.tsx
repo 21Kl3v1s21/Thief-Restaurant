@@ -1,15 +1,13 @@
-import { menu } from '../../data/data'
-import Breadcrumb from '@/app/components/Breadcrumb'
+'use client'
+import { useSearchParams } from 'next/navigation'
+import { menu } from '../data/data'
 import Image from 'next/image'
+import Breadcrumb from '@/app/components/Breadcrumb'
 
-// ✅ DO NOT use any custom type called PageProps
-export default function MenuSingle({
-  params,
-}: {
-  params: { id: string }
-}) {
-  const item = menu.find((item) => item.id === Number(params.id))
-  if (!item) return <h1>Menu item not found</h1>
+export default function MenuPage() {
+  const searchParams = useSearchParams()
+  const id = searchParams.get('id')
+  const item = menu.find((i) => i.id === Number(id)) ?? menu[0] // fallback
 
   return (
     <main id="main">
@@ -38,11 +36,4 @@ export default function MenuSingle({
       </section>
     </main>
   )
-}
-
-// ✅ Needed for SSG
-export async function generateStaticParams() {
-  return menu.map((item) => ({
-    id: item.id.toString(),
-  }))
 }
