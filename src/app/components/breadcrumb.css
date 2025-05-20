@@ -1,0 +1,64 @@
+.breadcrumbs {
+  padding: 15px 0;
+  background: #152328;
+  margin-top: 110px;
+}
+
+.breadcrumbs .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.breadcrumbs i {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #d77a61;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #d77a61;
+  padding: 1.3rem; /* ← space between icon and border */
+}
+
+.breadcrumbs i:hover {
+  background-color: #d77a61;
+  color: #eff1f3;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 98px;
+  }
+}
+
+.breadcrumbs h2 {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: flex !important; /* Keep flex on mobile */
+    flex-direction: row; /* Ensure row direction */
+  }
+  .breadcrumbs ol {
+    display: block;
+  }
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+}
