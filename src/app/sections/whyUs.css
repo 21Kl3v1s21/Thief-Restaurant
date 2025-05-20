@@ -1,0 +1,82 @@
+.why-us .box {
+  padding: 50px 30px;
+  background: radial-gradient(
+      circle at var(--x, 40%) var(--y, 40%),
+      rgba(216, 180, 160, 0.2),
+      transparent 70%
+    ),
+    linear-gradient(to bottom, #1f333d, #1f333d);
+
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3),
+    /* bottom shadow */ 0 1px 2px rgba(255, 255, 255, 0.05) inset; /* inner glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.why-us .box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4),
+    0 1px 2px rgba(255, 255, 255, 0.1) inset;
+}
+
+.why-us .box span {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #d8b4a0;
+}
+
+.why-us .box h4 {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+  margin: 20px 0;
+  color: #eff1f3;
+}
+
+.why-us .box p {
+  color: #eff1f3;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.why-us .box span,
+.why-us .box h4,
+.why-us .box p {
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    #d8b4a0,
+    #eff1f3
+  );
+  background-size: 150% 150%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: background 0.2s ease;
+}
+
+.gradient-text {
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    #d8b4a0,
+    #eff1f3,
+    #1f333d
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: background-position 0.2s ease;
+}
+
+@supports not (-webkit-background-clip: text) {
+  .why-us .box span,
+  .why-us .box h4,
+  .why-us .box p {
+    color: #d8b4a0;
+  }
+}
