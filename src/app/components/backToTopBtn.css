@@ -1,0 +1,34 @@
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  transition: all 0.4s;
+  border: 2px solid #d77a61;
+  text-decoration: none;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #d77a61;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background-color: #d77a61;
+  color: #eff1f3;
+}
+
+.back-to-top:hover i {
+  color: #eff1f3;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}

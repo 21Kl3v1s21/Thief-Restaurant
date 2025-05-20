@@ -7,6 +7,7 @@ import Script from 'next/script'
 import './globals.css'
 import TopBar from './components/TopBar'
 import Header from './components/Header'
+import BackToTopBtn from './components/BackToTopBtn'
 
 const playfair = Playfair_Display({
   variable: '--font-playfair-display',
@@ -31,6 +32,7 @@ export default function RootLayout({
         <TopBar />
         <Header/>
         {children}
+        <BackToTopBtn/>
         <Script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-C6RzsynM9kWDrMNeT87bh950GNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
