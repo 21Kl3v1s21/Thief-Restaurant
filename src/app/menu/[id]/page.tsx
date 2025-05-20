@@ -1,15 +1,15 @@
-import { menu } from '../../data/data';
-import Breadcrumb from '@/app/components/Breadcrumb';
-import Image from 'next/image';
+import { menu } from '../../data/data'
+import Breadcrumb from '@/app/components/Breadcrumb'
+import Image from 'next/image'
 
-// ✅ Use inline type — DO NOT name it PageProps
+// ✅ DO NOT use any custom type called PageProps
 export default function MenuSingle({
   params,
 }: {
-  params: { id: string };
+  params: { id: string }
 }) {
-  const item = menu.find((item) => item.id === Number(params.id));
-  if (!item) return <h1>Menu item not found</h1>;
+  const item = menu.find((item) => item.id === Number(params.id))
+  if (!item) return <h1>Menu item not found</h1>
 
   return (
     <main id="main">
@@ -37,12 +37,12 @@ export default function MenuSingle({
         </div>
       </section>
     </main>
-  );
+  )
 }
 
-// ✅ REQUIRED for static [id] builds
+// ✅ Needed for SSG
 export async function generateStaticParams() {
   return menu.map((item) => ({
     id: item.id.toString(),
-  }));
+  }))
 }
