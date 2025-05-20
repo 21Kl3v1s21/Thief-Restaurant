@@ -9,27 +9,36 @@ export default function MenuSingle({ params }: { params: { id: string } }) {
 
   return (
     <main id='main'>
-        <Breadcrumb page='Menu'/>
-        <section className='inner-page'>
-            <div className='container'>
-                <div className='row'>
-                    <div className='col-lg-6'>
-                        <Image src={item.preview}
-                        alt=''
-                        height={500}
-                        width={500}
-                        className='img-fluid' />
-                    </div>
-                    <div className='col-lg-6'>
-                        <h2 className='mt-3'>{item.name}</h2>
-                        <h4 className='mt-2'>
-                            <i>{item.ingredients.join(', ')} </i>
-                        </h4>
-                        <p className='mt-5'>{item.description} </p>
-                    </div>
-                </div>
+      <Breadcrumb page='Menu' />
+      <section className='inner-page'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-6'>
+              <Image
+                src={item.preview}
+                alt={item.name}
+                height={500}
+                width={500}
+                className='img-fluid'
+              />
             </div>
-        </section>
+            <div className='col-lg-6'>
+              <h2 className='mt-3'>{item.name}</h2>
+              <h4 className='mt-2'>
+                <i>{item.ingredients.join(', ')}</i>
+              </h4>
+              <p className='mt-5'>{item.description}</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
+}
+
+// ✅ Required by Next.js App Router for dynamic [id] routes
+export async function generateStaticParams() {
+  return menu.map((item) => ({
+    id: item.id.toString(),
+  }));
 }
