@@ -1,8 +1,8 @@
-import React from 'react';
 import { menu } from '../../data/data';
 import Breadcrumb from '@/app/components/Breadcrumb';
 import Image from 'next/image';
 
+// ✅ Use inline type — DO NOT name it PageProps
 export default function MenuSingle({
   params,
 }: {
@@ -40,8 +40,7 @@ export default function MenuSingle({
   );
 }
 
-export const dynamicParams = false;
-
+// ✅ REQUIRED for static [id] builds
 export async function generateStaticParams() {
   return menu.map((item) => ({
     id: item.id.toString(),
