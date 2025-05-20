@@ -1,3 +1,7 @@
+.why-us {
+  background-color: #152328;
+}
+
 .why-us .box {
   padding: 50px 30px;
   background: radial-gradient(
@@ -5,7 +9,7 @@
       rgba(216, 180, 160, 0.2),
       transparent 70%
     ),
-    linear-gradient(to bottom, #1f333d, #1f333d);
+    linear-gradient(to bottom, #223843, #1f333d);
 
   border-radius: 12px;
   overflow: hidden;
