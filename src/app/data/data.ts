@@ -25,12 +25,6 @@ export const navs = [
     },
     {
         id:5,
-        name:'Chefs',
-        target:'chefs',
-        active:false,
-    },
-    {
-        id:6,
         name:'Contact',
         target:'contact',
         active:false,
@@ -173,4 +167,43 @@ export const filters = [
         category:'desserts',
         active:false,
     },
+];
+
+export const events = [
+    {
+        id: 1,
+        image: '/images/events/wine-night.jpg',
+        title: 'Wine Tasting Night',
+        price: '350 $',
+        content: 'Join us for an exclusive evening of wine tasting featuring selections from local vineyards.',
+        details: 'Sample a curated selection of red and white wines, paired with gourmet appetizers. Our sommelier will guide you through each tasting, sharing insights and stories behind every bottle.',
+        summary: 'An elegant night for wine lovers to discover new favorites and enjoy delicious pairings.'
+        },
+        {
+        id: 2,
+        image: '/images/events/live-music.jpg',
+        title: 'Live Jazz Dinner',
+        price: '25 $',
+        content: 'Enjoy a delicious dinner accompanied by live jazz performances from talented local musicians.',
+        details: 'Our chef has prepared a special menu for the evening, perfectly complemented by smooth jazz tunes. Reserve your table for a memorable night of music and cuisine.',
+        summary: 'A perfect blend of great food and live music for a relaxing evening out.'
+        },
+        {
+        id: 3,
+        image: '/images/events/kids-day.jpg',
+        title: 'Family & Kids Day',
+        price: '15 $',
+        content: 'A fun-filled afternoon for families with games, activities, and a special kids menu.',
+        details: 'Bring the whole family for interactive games, face painting, and delicious kid-friendly dishes. Parents can relax while kids enjoy supervised activities.',
+        summary: 'A lively event designed for families to enjoy quality time together.'
+        },
+        {
+        id: 4,
+        image: '/images/events/cooking-class.jpg',
+        title: 'Cooking Class',
+        price: '40 $',
+        content: 'Learn to cook authentic Italian dishes with our head chef in a hands-on workshop.',
+        details: 'Participants will prepare classic Italian recipes from scratch and enjoy their creations at the end of the class. All skill levels welcome, ingredients provided.',
+        summary: 'A unique culinary experience for food enthusiasts and aspiring chefs.'
+    }
 ];
