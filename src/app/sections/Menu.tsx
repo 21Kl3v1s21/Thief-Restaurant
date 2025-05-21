@@ -5,6 +5,7 @@ import { menu, filters as initialFilters } from '../data/data'
 import SectionTitle from '../components/SectionTitle'
 import MenuItem from '../components/MenuItem'
 import Preloader from '../components/Preloader'
+import Link from 'next/link'
 
 type MenuItemType = {
   id: number;
@@ -40,9 +41,6 @@ export const Menu = () => {
     } else {
       const filteredItems = data.filter((item) => item.category === category)
       setItems(filteredItems)
-
-    //   const result = data.filter((item: {category:string}) => item.category === category)
-    //   setItems(result)
     };
   };
 
@@ -63,6 +61,9 @@ export const Menu = () => {
                   {filter.name}
                 </li>
               ))}
+              <Link href="/specials">
+                <button className="btn-primary">See Specials</button>
+              </Link>
             </ul>
           </div>
         </div>

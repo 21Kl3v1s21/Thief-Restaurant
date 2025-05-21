@@ -32,3 +32,16 @@
 .menu #menu-filters li:last-child {
   margin-left: 0;
 }
+
+.menu .btn-primary {
+  background: #152328;
+  color: #eff1f3;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: none;
+  transition: background 0.3s ease;
+}
+.menu .btn-primary:hover {
+  background: #1f333d;
+  color: #d8b4a0;
+}

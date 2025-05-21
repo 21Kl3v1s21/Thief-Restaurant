@@ -14,5 +14,6 @@ export default function MenuItem ({item,} : {item:{id:number; name:string; previ
         </div>
         <div className="menu-ingredients">{item.ingredients.join(', ')}</div>
     </div>
+    
   )
 }
