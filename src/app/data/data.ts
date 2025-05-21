@@ -205,5 +205,20 @@ export const events = [
         content: 'Learn to cook authentic Italian dishes with our head chef in a hands-on workshop.',
         details: 'Participants will prepare classic Italian recipes from scratch and enjoy their creations at the end of the class. All skill levels welcome, ingredients provided.',
         summary: 'A unique culinary experience for food enthusiasts and aspiring chefs.'
-    }
+    },
+];
+
+export const bookings = [
+    {
+        id:1,
+        details: {
+            name:'Example Name',
+            email:'info@example.com',
+            phone:'123456789',
+            date:'2025-21-05',
+            time:'20:45',
+            people:4,
+            Message:'We are a party of 4 looking for a table.'
+        },
+    },
 ];
