@@ -7,7 +7,7 @@ import { whyUs } from '../data/data'
 export default async function WhyUs() {
 
   return (
-     <section id="why-us" className="why-us">
+     <section id="why-us" className="why-us" data-aos='fade-down' data-aos-delay='100'>
       <div className="container">
         <SectionTitle title="Why Us" subtitle="Why Choose Our Restaurant" />
         <div className="row justify-content-center">

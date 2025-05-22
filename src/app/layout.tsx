@@ -10,6 +10,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 import TopBar from './components/TopBar'
 import Header from './components/Header'
 import BackToTopBtn from './components/BackToTopBtn'
+import ClientAOSWrapper from './components/ClientAOSWrapper' // <-- AOS wrapper
 
 const playfair = Playfair_Display({
   variable: '--font-playfair-display',
@@ -32,10 +33,10 @@ export default function RootLayout({
     <ClerkProvider
       appearance={{
         variables: {
-          colorPrimary: '#d77a61', // Match your theme color
-          colorText: '#d8b4a0', // Match your text color
-          colorBackground: '#1f333d', // Match your form background
-          colorInputBackground: '#152328', // Match your input background
+          colorPrimary: '#d77a61',
+          colorText: '#d8b4a0',
+          colorBackground: '#1f333d',
+          colorInputBackground: '#152328',
         },
         elements: {
           formButtonPrimary: 'bg-[#d77a61] hover:bg-[#c96c56]',
@@ -53,8 +54,13 @@ export default function RootLayout({
         <body className={playfair.variable}>
           <TopBar />
           <Header />
-          {children}
+
+          <ClientAOSWrapper>
+            {children}
+          </ClientAOSWrapper>
+
           <BackToTopBtn />
+
           <Script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh950GNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -64,5 +70,5 @@ export default function RootLayout({
         </body>
       </html>
     </ClerkProvider>
-  );
+  )
 }
