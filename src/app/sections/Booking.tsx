@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "./booking.css";
 import SectionTitle from "../components/SectionTitle";
+import { submitBooking } from "../actions/booking";
 
 export default function Booking() {
   const initialState = {
@@ -16,39 +17,41 @@ export default function Booking() {
 
   const [text, setText] = useState(initialState);
   const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState<boolean>(false);
+  const [success, setSuccess] = useState(false);
 
   const handleTextChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setText({ ...text, [name]: value });
+    setText((prev) => ({ ...prev, [name]: value }));
     setError(null);
   };
 
-  const handleSubmitBooking = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmitBooking = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Simple validation
-    if (
-      !text.name ||
-      !text.email ||
-      !text.date ||
-      !text.time ||
-      !text.people
-    ) {
+    if (!text.name || !text.email || !text.date || !text.time || !text.people) {
       setError("Please fill in all required fields.");
       return;
     }
 
-    // Normally you'd send data to an API here
+    try {
+      await submitBooking({
+        name: text.name,
+        email: text.email,
+        phone: text.phone,
+        date: text.date,
+        time: text.time,
+        people: Number(text.people),
+        message: text.message,
+      });
 
-    // Reset form and show success
-    setSuccess(true);
-    setText(initialState);
-
-    // Clear success message after 5 seconds
-    setTimeout(() => setSuccess(false), 5000);
+      setSuccess(true);
+      setText(initialState);
+      setTimeout(() => setSuccess(false), 5000);
+    } catch {
+      setError("Failed to submit booking. Please try again.");
+    }
   };
 
   return (
@@ -89,7 +92,7 @@ export default function Booking() {
                 name="phone"
                 value={text.phone}
                 className="form-control"
-                placeholder="Your Phone Number"
+                placeholder="Phone Number"
                 onChange={handleTextChange}
               />
             </div>
@@ -121,12 +124,12 @@ export default function Booking() {
                 onChange={handleTextChange}
               />
             </div>
-            <div className="mt-3 form-group">
+            <div className="form-group mt-3">
               <textarea
                 name="message"
                 value={text.message}
                 className="form-control"
-                placeholder="Message"
+                placeholder="Message (optional)"
                 onChange={handleTextChange}
               />
             </div>
@@ -134,12 +137,12 @@ export default function Booking() {
 
           {/* Feedback messages */}
           {error && (
-            <p className="error-message text-center mt-3">{error}</p>
+            <div className="error-message text-center mt-3">{error}</div>
           )}
           {success && (
-            <p className="sent-message text-center mt-3">
-              Booking successful! We look forward to seeing you.
-            </p>
+            <div className="sent-message text-center mt-3">
+              Booking submitted successfully! 🎉
+            </div>
           )}
 
           <div className="text-center mt-3">

@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  // For better connection management in production
+  relationMode = "prisma" // Optional but recommended for Supabase
+}
+
+model Booking {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String?
+  date      String
+  time      String
+  people    Int
+  message   String?
+  createdAt DateTime @default(now())
+}

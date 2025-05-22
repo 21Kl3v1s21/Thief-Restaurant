@@ -222,3 +222,47 @@ export const bookings = [
         },
     },
 ];
+
+// types/database.ts
+export type Database = {
+  public: {
+    Tables: {
+      Booking: {
+        Row: {
+          id: number;
+          name: string;
+          email: string;
+          phone: string | null;
+          date: string;
+          time: string;
+          people: number;
+          message: string | null;
+          created_at: string;
+        };
+        Insert: {
+          id?: number;
+          name: string;
+          email: string;
+          phone?: string | null;
+          date: string;
+          time: string;
+          people: number;
+          message?: string | null;
+          created_at?: string;
+        };
+        Update: {
+          id?: number;
+          name?: string;
+          email?: string;
+          phone?: string | null;
+          date?: string;
+          time?: string;
+          people?: number;
+          message?: string | null;
+          created_at?: string;
+        };
+      };
+      // ... your other tables
+    };
+  };
+};
