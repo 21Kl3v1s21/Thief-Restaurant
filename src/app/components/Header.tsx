@@ -3,7 +3,8 @@ import React, {useState, useEffect} from 'react';
 import './header.css';
 import AppBtn from './AppBtn';
 import Nav from './Nav';
-import Link from 'next/link'; // Import the Link component
+import Link from 'next/link'; 
+import { UserButton } from '@clerk/nextjs';
 
 export default function Header() {
     const [scroll, setScroll] = useState(0);
@@ -23,9 +24,11 @@ export default function Header() {
         <header id='header' className={`fixed-top d-flex align-items-center  ${scroll > 100 ? 'header-scrolled' : undefined}`}>
             <div className='container-fluid container-xl d-flex align-items-center justify-content-lg-between'>
                 <h1 className='logo me-auto me-lg-0'>
-                    <Link href="/">Restaurant</Link> {/* Replace <a> with <Link> */}
+                    <Link href="/">Restaurant</Link> 
                 </h1>
                 <Nav/>
+                <UserButton afterSignOutUrl="/" />
+        {/* OR */}
                 <AppBtn name='book a table' />
             </div>
         </header>

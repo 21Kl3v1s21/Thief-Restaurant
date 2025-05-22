@@ -35,6 +35,9 @@ export default function Nav() {
                         )}
                     </li>
                 ))}
+                <Link href="/admin/bookings" className="px-5 text-sm text-blue-500 hover:underline">
+                Log In
+                </Link>
             </ul>
             <i className='bi bi-list mobile-nav-toggle' onClick={handleToggleMenu}></i>
         </nav>

@@ -1,0 +1,8 @@
+.log {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove extra margin */
+  padding: 0; /* Remove extra padding */
+}
