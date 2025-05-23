@@ -11,6 +11,7 @@ import TopBar from './components/TopBar'
 import Header from './components/Header'
 import BackToTopBtn from './components/BackToTopBtn'
 import ClientAOSWrapper from './components/ClientAOSWrapper' // <-- AOS wrapper
+import Footer from './sections/Footer'
 
 const playfair = Playfair_Display({
   variable: '--font-playfair-display',
@@ -59,6 +60,7 @@ export default function RootLayout({
             {children}
           </ClientAOSWrapper>
 
+          <Footer/>
           <BackToTopBtn />
 
           <Script
