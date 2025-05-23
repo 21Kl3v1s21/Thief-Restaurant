@@ -25,6 +25,12 @@ export const navs = [
     },
     {
         id:5,
+        name:'Gallery',
+        target:'gallery',
+        active:false,
+    },
+    {
+        id:6,
         name:'Contact',
         target:'contact',
         active:false,
@@ -266,3 +272,38 @@ export type Database = {
     };
   };
 };
+
+export const gallery = [
+    {
+        id: 1,
+        src: '/images/gallery/gallery-1.jpg',
+        },
+        {
+        id: 2,
+        src: '/images/gallery/gallery-2.jpg',
+        },
+        {
+        id: 3,
+        src: '/images/gallery/gallery-3.jpg',
+        },
+        {
+        id: 4,
+        src: '/images/gallery/gallery-4.jpg',
+        },
+        {
+        id: 5,
+        src: '/images/gallery/gallery-5.jpg',
+        },
+        {
+        id: 6,
+        src: '/images/gallery/gallery-6.jpg',
+        },
+        {
+        id: 7,
+        src: '/images/gallery/gallery-7.jpg',
+        },
+        {
+        id: 8,
+        src: '/images/gallery/gallery-8.jpg',
+    }
+]
