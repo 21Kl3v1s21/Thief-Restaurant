@@ -23,6 +23,12 @@ export const navs = [
         target:'events',
         active:false,
     },
+    {
+        id:5,
+        name:'Contact',
+        target:'contact',
+        active:false,
+    },
 ];
 
 export const whyUs = [
