@@ -4,7 +4,8 @@
 
 .why-us .box {
   padding: 50px 30px;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at var(--x, 40%) var(--y, 40%),
       rgba(216, 180, 160, 0.2),
       transparent 70%
@@ -14,15 +15,20 @@
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.3),
     /* bottom shadow */ 0 1px 2px rgba(255, 255, 255, 0.05) inset; /* inner glow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   transform-style: preserve-3d;
+  margin-top: 1rem;
 }
 
 .why-us .box:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4),
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.4),
     0 1px 2px rgba(255, 255, 255, 0.1) inset;
 }
 

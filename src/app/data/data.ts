@@ -63,6 +63,7 @@ export const menu = [
         preview: '/images/menu/margherita.jpg',
         ingredients: ['Tomato Sauce', 'Mozzarella', 'Basil', 'Olive Oil'],
         category: 'main',
+        special:true,
         description: 'Classic Italian pizza topped with fresh mozzarella, tomato sauce, and basil.'
     },
     {
@@ -72,6 +73,7 @@ export const menu = [
         preview: '/images/menu/carbonara.jpg',
         ingredients: ['Spaghetti', 'Eggs', 'Pancetta', 'Parmesan', 'Black Pepper'],
         category: 'main',
+        special:true,
         description: 'Traditional Roman pasta dish with creamy egg sauce, pancetta, and parmesan.'
     },
     {
@@ -81,6 +83,7 @@ export const menu = [
         preview: '/images/menu/caesar.jpg',
         ingredients: ['Romaine Lettuce', 'Croutons', 'Parmesan', 'Caesar Dressing'],
         category: 'salads',
+        special:true,
         description: 'Crisp romaine lettuce tossed with parmesan, croutons, and Caesar dressing.'
     },
     {
@@ -90,6 +93,7 @@ export const menu = [
         preview: '/images/menu/salmon.jpg',
         ingredients: ['Salmon Fillet', 'Lemon', 'Herbs', 'Olive Oil'],
         category: 'main',
+        special:false,
         description: 'Fresh salmon fillet grilled to perfection and served with a lemon-herb sauce.'
     },
     {
@@ -99,6 +103,7 @@ export const menu = [
         preview: '/images/menu/alfredo.jpg',
         ingredients: ['Fettuccine', 'Chicken Breast', 'Cream', 'Parmesan', 'Garlic'],
         category: 'main',
+        special:true,
         description: 'Creamy fettuccine Alfredo with tender grilled chicken and parmesan cheese.'
     },
     {
@@ -108,6 +113,7 @@ export const menu = [
         preview: '/images/menu/burger.jpg',
         ingredients: ['Beef Patty', 'Lettuce', 'Tomato', 'Cheddar', 'Bun'],
         category: 'main',
+        special:false,
         description: 'Juicy beef burger with cheddar cheese, lettuce, and tomato on a toasted bun.'
     },
     {
@@ -117,6 +123,7 @@ export const menu = [
         preview: '/images/menu/rizotto.jpg',
         ingredients: ['Arborio Rice', 'Mushrooms', 'Parmesan', 'White Wine', 'Onion'],
         category: 'main',
+        special:true,
         description: 'Creamy risotto cooked with wild mushrooms, white wine, and parmesan cheese.'
     },
     {
@@ -126,6 +133,7 @@ export const menu = [
         preview: '/images/menu/greek-salad.jpg',
         ingredients: ['Tomato', 'Cucumber', 'Feta', 'Olives', 'Red Onion'],
         category: 'salads',
+        special:false,
         description: 'Refreshing salad with tomatoes, cucumbers, feta cheese, olives, and red onion.'
     },
     {
@@ -135,6 +143,7 @@ export const menu = [
         preview: '/images/menu/tiramisu.jpg',
         ingredients: ['Mascarpone', 'Espresso', 'Ladyfingers', 'Cocoa Powder', 'Eggs'],
         category: 'desserts',
+        special:true,
         description: 'Classic Italian dessert with layers of espresso-soaked ladyfingers and mascarpone.'
     },
     {
@@ -144,6 +153,7 @@ export const menu = [
         preview: '/images/menu/lava-cake.jpg',
         ingredients: ['Dark Chocolate', 'Butter', 'Eggs', 'Sugar', 'Flour'],
         category: 'desserts',
+        special:false,
         description: 'Warm chocolate cake with a gooey molten center, served with vanilla ice cream.'
     }
 ];
